@@ -1,0 +1,331 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+::selection {
+    background: #2D2F36;
+}
+    ::-webkit-selection {
+
+    background: #2D2F36;
+}
+
+::-moz-selection {
+    background: #2D2F36;
+}
+
+
+
+/* useful classes */
+.hidden {
+    display: none;
+}
+
+.blur {
+    opacity: 0.05;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background: #3c373e;
+    font-family: 'Inter UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.page {
+    background: #3c373e;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    position: absolute;
+    place-content: center;
+    width: calc(100% - 40px);
+}
+    @media (max-width: 767px) {
+        .page {
+            height: auto;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .container {
+
+    display: flex;
+    height: 320px;
+    margin: 0 auto;
+    width: 640px;
+    }
+
+
+
+
+
+
+    @media (max-width: 767px) {
+        .container {
+            flex-direction: column;
+            height: 630px;
+            width: 320px;
+        }
+    }
+
+    .left {
+        background: white;
+        height: calc(100% - 40px);
+        top: 20px;
+        position: relative;
+        width: 50%;
+    }
+        @media (max-width: 767px) {
+            .left {
+                height: 100%;
+                left: 20px;
+                width: calc(100% - 40px);
+                max-height: 270px;
+            }
+        }
+            .login {
+                font-size: 50px;
+                font-weight: 900;
+                margin: 50px 40px 40px;
+            }
+                .eula {
+                    color: #999;
+                    font-size: 14px;
+                
+
+                line-height: 1.5;
+                margin: 40px;
+                }
+                .right {
+
+                background: #d1d3dd;
+                box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+                color: #0a0a19;
+                position: relative;
+                width: 50%;
+                }
+
+
+
+
+                @media (max-width: 767px) {
+                    .right {
+                        flex-shrink: 0;
+                        height: 100%;
+                        width: 100%;
+                        max-height: 350px;
+                    }
+                }
+
+                svg {
+                    position: absolute;
+                
+
+                width: 320px;
+                }
+                path {
+
+                fill: none;
+                stroke: url(#linearGradient);;
+                stroke-width: 4;
+                stroke-dasharray: 240 1386;
+                }
+                .form {
+                direction: rtl;
+                margin: 40px;
+                position: absolute;
+                }
+                label {
+                    color: #0f0f21;
+                    display: block;
+                    font-size: 14px;
+                    height: 16px;
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                }
+
+
+
+
+
+
+
+                input {
+
+                background: transparent;
+                border: 0;
+                color: #0a0909;
+                font-size: 15px;
+                height: 30px;
+                line-height: 30px;
+                outline: none !important;
+                width: 100%;
+                }
+                input::-moz-focus-inner {
+
+                border: 0;
+                }
+                #submit {
+                    color: #707075;
+                    margin-top: 40px;
+                    transition: color 300ms;
+                }
+
+                #submit::focus {
+                    color: #c41ad7;
+                }
+
+                #submit:active {
+                    color: #b5c110;
+                }
+                .center {
+                    display: flex;
+                    justify-content: center;
+                   /* align-items: center;*/
+                }
+
+
+
+                /* modal */
+                .modal {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+
+                }
+
+                                .card {
+                                    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+                                    width: 259px;
+                                    height: 328px;
+                                    padding: 5px;
+                                    border-radius: 1rem;
+                                    overflow: visible;
+                                    background: #f7ba2b;
+                                    background: var(--background);
+                                    position: relative;
+                                    z-index: 1;
+                                }
+                
+                                .card::after {
+                                    position: absolute;
+                                    content: "";
+                                    top: 30px;
+                                    left: 0;
+                                    right: 0;
+                                    z-index: -1;
+                                    height: 100%;
+                                    width: 100%;
+                                    transform: scale(0.8);
+                                    filter: blur(25px);
+                                    background: #f7ba2b;
+                                    background: var(--background);
+                                    transition: opacity .5s;
+                                }
+                
+                                .card-info {
+                                    --color: #181818;
+                                    background: var(--color);
+                                    color:#b5c110;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: visible;
+                                    border-radius: .7rem;
+                                    flex-direction: column;
+                                }
+                
+                                .card .title {
+                                    font-weight: bold;
+                                    letter-spacing: .1em;
+                                }
+                                
+                                .m-close {
+                                    width: 200px;
+                                        height: 55px;
+                                        margin-top: 100px
+
+                                }
+
+                                                                .m-close {
+                                                                    position: relative;
+                                                                    display: flex;
+                                                                    justify-content: center;
+                                                                    align-items: center;
+                                                                    border-radius: 5px;
+                                                                    background: #183153;
+                                                                    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+                                                                    overflow: hidden;
+                                                                    border: none;
+                                                                }
+                                
+                                                                .m-close:after {
+                                                                    content: " ";
+                                                                    width: 0%;
+                                                                    height: 100%;
+                                                                    background: #FFD401;
+                                                                    position: absolute;
+                                                                    transition: all 0.4s ease-in-out;
+                                                                    right: 0;
+                                                                }
+                                
+                                                                .m-close:hover::after {
+                                                                    right: auto;
+                                                                    left: 0;
+                                                                    width: 100%;
+                                                                }
+                                
+                                                                .m-close span {
+                                                                    text-align: center;
+                                                                    text-decoration: none;
+                                                                    width: 100%;
+                                                                    padding: 18px 25px;
+                                                                    color: #fff;
+                                                                    font-size: 1.125em;
+                                                                    font-weight: 700;
+                                                                    letter-spacing: 0.3em;
+                                                                    z-index: 20;
+                                                                    transition: all 0.3s ease-in-out;
+                                                                }
+                                
+                                                                .m-close:hover span {
+                                                                    color: #183153;
+                                                                    animation: scaleUp 0.3s ease-in-out;
+                                                                }
+                                
+                                                                @keyframes scaleUp {
+                                                                    0% {
+                                                                        transform: scale(1);
+                                                                    }
+                                
+                                                                    50% {
+                                                                        transform: scale(0.95);
+                                                                    }
+                                
+                                                                    100% {
+                                                                        transform: scale(1);
+                                                                    }
+                                                                }
+                
+                            
